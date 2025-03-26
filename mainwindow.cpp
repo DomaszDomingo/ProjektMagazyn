@@ -12,11 +12,16 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     // Ustaw limity progów
-    ui->progressList->setMaximum(10);
-    ui->progressMala->setMaximum(10);
-    ui->progressSrednia->setMaximum(10);
-    ui->progressDuza->setMaximum(10);
+    ui->progressListA->setMaximum(10);
+    ui->progressMalaA->setMaximum(10);
+    ui->progressSredniaA->setMaximum(10);
+    ui->progressDuzaA->setMaximum(10);
 
+    connect(ui->magazynComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [=](int index){
+        manager.ustawMagazynAktywny(index == 0 ? MagazynManager::A : MagazynManager::B);
+        aktualizujMagazyn();
+    });
+    manager.ustawMagazynAktywny(MagazynManager::A);
     aktualizujMagazyn();
 }
 
@@ -28,8 +33,9 @@ MainWindow::~MainWindow()
 void MainWindow::on_losujButton_clicked()
 {
     QString przesylka = LosowaniePrzesylek::losujPrzesylke();
-    QString wynik = SortowaniePrzesylek::dodajPrzesylke(przesylka);
+    QString wynik = manager.dodajDoAktywnego(przesylka);
     ui->infoText->setText(wynik);
+    aktualizujMagazyn();
 
     if (wynik.contains("Limit")) {
         ui->infoText->setStyleSheet("color: red;");
@@ -37,28 +43,41 @@ void MainWindow::on_losujButton_clicked()
         ui->infoText->setStyleSheet("color: black;");
         HistoriaPrzesylek::dodajDoHistorii(przesylka);
         ui->historiaPaczek->setText(HistoriaPrzesylek::pobierzHistorie());
+
+    QString przesylka = LosowaniePrzesylek::losujPrzesylke();
+    QString wynik = manager.dodajDoAktywnego(przesylka);
     }
 
-    aktualizujMagazyn();
+
 }
 
 void MainWindow::aktualizujMagazyn()
 {
     const int maks = 10;
-    auto stosy = SortowaniePrzesylek::pobierzStosy();
 
-    int listy = stosy["List"].size();
-    int mala = stosy["Mała paczka"].size();
-    int srednia = stosy["Średnia paczka"].size();
-    int duza = stosy["Duża paczka"].size();
+    QMap<QString, int> stanA = manager.pobierzStanMagazynu(MagazynManager::A);
+    QMap<QString, int> stanB = manager.pobierzStanMagazynu(MagazynManager::B);
 
-    ui->progressList->setValue(listy);
-    ui->progressMala->setValue(mala);
-    ui->progressSrednia->setValue(srednia);
-    ui->progressDuza->setValue(duza);
+    // Progress bary - ustawiamy maksymalną wartość tylko raz (opcjonalnie)
+    QList<QProgressBar*> bary = {
+        ui->progressListA, ui->progressMalaA, ui->progressSredniaA, ui->progressDuzaA,
+        ui->progressListB, ui->progressMalaB, ui->progressSredniaB, ui->progressDuzaB
+    };
+    for (QProgressBar* bar : bary) {
+        bar->setMaximum(maks);
+    }
 
-    ui->labelList->setText(QString("Listy\n%1/%2").arg(listy).arg(maks));
-    ui->labelMala->setText(QString("Małe paczki\n%1/%2").arg(mala).arg(maks));
-    ui->labelSrednia->setText(QString("Średnie paczki\n%1/%2").arg(srednia).arg(maks));
-    ui->labelDuza->setText(QString("Duże paczki\n%1/%2").arg(duza).arg(maks));
+    // MAGAZYN A
+    ui->progressListA->setValue(stanA["List"]);
+    ui->progressMalaA->setValue(stanA["Mała paczka"]);
+    ui->progressSredniaA->setValue(stanA["Średnia paczka"]);
+    ui->progressDuzaA->setValue(stanA["Duża paczka"]);
+
+    // MAGAZYN B
+    ui->progressListB->setValue(stanB["List"]);
+    ui->progressMalaB->setValue(stanB["Mała paczka"]);
+    ui->progressSredniaB->setValue(stanB["Średnia paczka"]);
+    ui->progressDuzaB->setValue(stanB["Duża paczka"]);
+
+    // ✅ Nie ruszamy żadnych QLabel – zostają takie, jak ustawiłeś w edytorze!
 }

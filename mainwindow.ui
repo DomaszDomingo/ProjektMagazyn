@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>550</x>
-      <y>470</y>
+      <y>440</y>
       <width>231</width>
-      <height>61</height>
+      <height>101</height>
      </rect>
     </property>
    </widget>
@@ -28,9 +28,9 @@
     <property name="geometry">
      <rect>
       <x>387</x>
-      <y>471</y>
+      <y>441</y>
       <width>157</width>
-      <height>61</height>
+      <height>102</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -46,103 +46,417 @@
      </item>
     </layout>
    </widget>
+   <widget class="QComboBox" name="magazynComboBox">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>410</y>
+      <width>171</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Magazyn A</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Magazyn B</string>
+     </property>
+    </item>
+   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>311</width>
-      <height>191</height>
+      <width>411</width>
+      <height>221</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="verticalLayout_10">
        <item>
-        <widget class="QProgressBar" name="progressList">
-         <property name="value">
-          <number>24</number>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="labelList">
-         <property name="text">
-          <string>
-Listy
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QProgressBar" name="progressListA">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>133</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>24</width>
+               <height>133</height>
+              </size>
+             </property>
+             <property name="baseSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="textVisible">
+              <bool>true</bool>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignVCenter">
+            <widget class="QLabel" name="labelListA">
+             <property name="maximumSize">
+              <size>
+               <width>43</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Listy
  x/10</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <widget class="QProgressBar" name="progressMala">
-         <property name="value">
-          <number>24</number>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="labelMala">
-         <property name="text">
-          <string>Paczki
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QProgressBar" name="progressMalaA">
+             <property name="minimumSize">
+              <size>
+               <width>24</width>
+               <height>133</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>24</width>
+               <height>133</height>
+              </size>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="textVisible">
+              <bool>true</bool>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="labelMalaA">
+             <property name="maximumSize">
+              <size>
+               <width>33</width>
+               <height>52</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Paczki
  Małe
  x/10</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
-       <item>
-        <widget class="QProgressBar" name="progressSrednia">
-         <property name="value">
-          <number>24</number>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="labelSrednia">
-         <property name="text">
-          <string>Paczki
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QProgressBar" name="progressSredniaA">
+             <property name="maximumSize">
+              <size>
+               <width>24</width>
+               <height>137</height>
+              </size>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="textVisible">
+              <bool>true</bool>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="labelSredniaA">
+             <property name="maximumSize">
+              <size>
+               <width>39</width>
+               <height>48</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Paczki
 Średnie
  x/10</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QProgressBar" name="progressDuzaA">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>24</width>
+               <height>137</height>
+              </size>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="textVisible">
+              <bool>true</bool>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="labelDuzaA">
+             <property name="maximumSize">
+              <size>
+               <width>33</width>
+               <height>48</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Paczki
+Duże
+ x/10</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelMagazynuA">
+         <property name="text">
+          <string>Magazyn A</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
+      <layout class="QVBoxLayout" name="verticalLayout_11">
        <item>
-        <widget class="QProgressBar" name="progressDuza">
-         <property name="value">
-          <number>24</number>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="labelDuza">
-         <property name="text">
-          <string>Paczki
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QProgressBar" name="progressListB">
+             <property name="maximumSize">
+              <size>
+               <width>24</width>
+               <height>133</height>
+              </size>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="labelListB">
+             <property name="maximumSize">
+              <size>
+               <width>26</width>
+               <height>52</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Listy
+ x/10</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QProgressBar" name="progressMalaB">
+             <property name="minimumSize">
+              <size>
+               <width>24</width>
+               <height>133</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>24</width>
+               <height>133</height>
+              </size>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="labelMalaB">
+             <property name="maximumSize">
+              <size>
+               <width>33</width>
+               <height>52</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Paczki
+ Małe
+ x/10</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QProgressBar" name="progressSredniaB">
+             <property name="maximumSize">
+              <size>
+               <width>24</width>
+               <height>137</height>
+              </size>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="labelSredniaB">
+             <property name="maximumSize">
+              <size>
+               <width>39</width>
+               <height>48</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Paczki
+Średnie
+ x/10</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QProgressBar" name="progressDuzaB">
+             <property name="maximumSize">
+              <size>
+               <width>24</width>
+               <height>137</height>
+              </size>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="labelDuzaB">
+             <property name="maximumSize">
+              <size>
+               <width>33</width>
+               <height>48</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Paczki
 Duże
  x/10</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelMagazynuB">
+         <property name="text">
+          <string>Magazyn B</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>

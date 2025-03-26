@@ -26,6 +26,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         losowanieprzesylek.h losowanieprzesylek.cpp
         historiaprzesylek.h historiaprzesylek.cpp
         sortowanieprzesylek.h sortowanieprzesylek.cpp
+        magazyn.h magazyn.cpp
+        magazynmanager.h magazynmanager.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET ProjektV2 APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

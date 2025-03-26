@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "magazynmanager.h"
+#include <QComboBox>
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,6 +25,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    MagazynManager manager;
 };
 
 #endif // MAINWINDOW_H
