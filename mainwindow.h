@@ -3,9 +3,6 @@
 
 #include <QMainWindow>
 #include "magazynmanager.h"
-#include <QComboBox>
-
-
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,7 +18,11 @@ public:
 
 private slots:
     void on_losujButton_clicked();
+    void on_usunOstatniaButton_clicked();      // <- usuwa ostatnią paczkę z aktywnego magazynu
+    void on_oproznijMagazynButton_clicked();   // <- opróżnia aktywny magazyn
     void aktualizujMagazyn();
+    void on_przeniesButton_clicked();
+
 
 private:
     Ui::MainWindow *ui;

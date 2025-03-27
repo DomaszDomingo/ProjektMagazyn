@@ -14,59 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTextEdit" name="historiaPaczek">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>440</y>
-      <width>231</width>
-      <height>101</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>387</x>
-      <y>441</y>
-      <width>157</width>
-      <height>102</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QTextEdit" name="infoText"/>
-     </item>
-     <item>
-      <widget class="QPushButton" name="losujButton">
-       <property name="text">
-        <string>Losuj Przesyłkę</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QComboBox" name="magazynComboBox">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>410</y>
-      <width>171</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>Magazyn A</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Magazyn B</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -464,6 +412,174 @@ Duże
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>470</y>
+      <width>84</width>
+      <height>72</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_12">
+     <item>
+      <widget class="QPushButton" name="usunOstatniaButton">
+       <property name="text">
+        <string>Usuń Ostatnią</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="oproznijMagazynButton">
+       <property name="text">
+        <string>Opróżnij
+magazyn</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>290</y>
+      <width>258</width>
+      <height>250</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_15">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_13">
+         <item>
+          <widget class="QLabel" name="zLabel">
+           <property name="text">
+            <string>Z</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboZ">
+           <item>
+            <property name="text">
+             <string>Mag A</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Mag B</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="przeniesButton">
+         <property name="text">
+          <string>Przenieś</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_14">
+         <item>
+          <widget class="QLabel" name="doLabel">
+           <property name="text">
+            <string>Do</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboDo">
+           <item>
+            <property name="text">
+             <string>Mag A</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Mag B</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="historiaPaczek"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>410</y>
+      <width>203</width>
+      <height>134</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_16">
+     <item>
+      <widget class="QComboBox" name="magazynComboBox">
+       <property name="maximumSize">
+        <size>
+         <width>201</width>
+         <height>24</height>
+        </size>
+       </property>
+       <item>
+        <property name="text">
+         <string>Magazyn A</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Magazyn B</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTextEdit" name="infoText">
+         <property name="maximumSize">
+          <size>
+           <width>199</width>
+           <height>70</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="losujButton">
+         <property name="maximumSize">
+          <size>
+           <width>199</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Losuj Przesyłkę</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -479,7 +595,6 @@ Duże
  </widget>
  <tabstops>
   <tabstop>losujButton</tabstop>
-  <tabstop>infoText</tabstop>
   <tabstop>historiaPaczek</tabstop>
  </tabstops>
  <resources/>

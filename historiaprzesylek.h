@@ -1,4 +1,3 @@
-// historiaprzesylek.h
 #ifndef HISTORIAPRZESYLEK_H
 #define HISTORIAPRZESYLEK_H
 
@@ -8,7 +7,7 @@
 class HistoriaPrzesylek
 {
 public:
-    static void dodajDoHistorii(const QString& przesylka);
+    static void dodajDoHistorii(const QString& wpis);
     static QString pobierzHistorie();
 
 private:

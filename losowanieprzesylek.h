@@ -1,13 +1,12 @@
-// losowanieprzesylek.h
 #ifndef LOSOWANIEPRZESYLEK_H
 #define LOSOWANIEPRZESYLEK_H
 
-#include <QString>
+#include "przesylka.h"
 
 class LosowaniePrzesylek
 {
 public:
-    static QString losujPrzesylke();
+    static Przesylka losujPrzesylke();
 };
 
 #endif // LOSOWANIEPRZESYLEK_H
